@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resh — Kleidung</title>
+  <meta name="description" content="Resh — Kleidung. Kollektion, Über uns, Kontakt."/>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111;
+      --accent:#0B7285;
+      --muted:#6b7280;
+      --card:#f8fafb;
+      --radius:12px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased;
+      line-height:1.45;
+    }
+    .wrap{max-width:var(--maxw); margin:28px auto; padding:0 20px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;}
+    .logo{
+      width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;
+      box-shadow:0 6px 18px rgba(11,114,133,0.14);
+    }
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-size:0.95rem}
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:18px 0 36px;
+    }
+    .hero .lead{max-width:54ch;}
+    .h1{font-size:2.1rem;font-weight:700;margin:0 0 8px;}
+    .sub{color:var(--muted);margin:0 0 18px;}
+    .cta{display:inline-block;background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;}
+    .hero .preview{
+      border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(2,6,23,0.08); background:var(--card);
+      display:grid; grid-template-rows: 1fr auto;
+    }
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;padding:8px}
+    .gallery img{width:100%;height:110px;object-fit:cover;display:block;border-radius:8px;}
+    .price{padding:12px 14px;}
+    .price h3{margin:0;font-size:1rem}
+    .price p{margin:6px 0 0;color:var(--muted);font-size:0.9rem}
+
+    /* Collections */
+    .collections{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:18px 0 36px}
+    .card{background:var(--card);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 8px 22px rgba(2,6,23,0.04);display:flex;flex-direction:column}
+    .card img{width:100%;height:220px;object-fit:cover;display:block}
+    .card-body{padding:12px}
+    .card-body h4{margin:0 0 6px;font-size:1rem}
+    .muted{color:var(--muted);font-size:0.9rem}
+
+    /* About / Kontakt */
+    .two{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start;margin-bottom:36px}
+    .contact{background:linear-gradient(180deg, rgba(11,114,133,0.06), rgba(125,211,252,0.03));padding:18px;border-radius:12px}
+    .form-row{display:flex;gap:8px}
+    input, textarea{
+      width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef0;background:white;font-size:0.95rem;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600;border:none}
+    footer{margin:36px 0 80px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; }
+      .two{grid-template-columns:1fr;}
+      .hero .preview img{height:160px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">R</div>
+        <div>
+          <div style="font-weight:700">Resh</div>
+          <div style="font-size:0.85rem;color:var(--muted);margin-top:2px">Kleidung & Kollektionen</div>
+        </div>
+      </a>
+      <nav>
+        <a href="#kollektionen">Kollektionen</a>
+        <a href="#about">Über</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-label="Hero">
+      <div class="lead">
+        <h1 class="h1">Resh — Kleidung mit Charakter</h1>
+        <p class="sub">Zeitlose Stücke, moderne Schnitte und Alltagsbegleiter. Alte & neue Styles — hier ist alles willkommen.</p>
+        <a href="#kollektionen" class="cta">Kollektionen ansehen</a>
+      </div>
+
+      <div class="preview" aria-hidden="false">
+        <div class="gallery">
+          <!-- Platzhalterbilder: ersetze die URLs durch eigene Bilder -->
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=1200&q=80&auto=format&fit=crop" alt="Beispiel 1">
+          <img src="https://images.unsplash.com/photo-1520975919086-8b324b6b3b1b?w=1200&q=80&auto=format&fit=crop" alt="Beispiel 2">
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?w=1200&q=80&auto=format&fit=crop" alt="Beispiel 3">
+          <img src="https://images.unsplash.com/photo-1520975919086-1db6e7e6b7ff?w=1200&q=80&auto=format&fit=crop" alt="Beispiel 4">
+        </div>
+        <div class="price">
+          <h3>Population Capsule</h3>
+          <p class="muted">Mix aus Street- und Classicwear — für jeden Tag.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kollektionen">
+      <h2 style="margin:8px 0 12px">Kollektionen</h2>
+      <div class="collections">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1520975919086-8b324b6b3b1b?w=1200&q=60&auto=format&fit=crop" alt="Kollektion 1">
+          <div class="card-body">
+            <h4>Signature</h4>
+            <p class="muted">Essentials mit klaren Linien — universell kombinierbar.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=1200&q=60&auto=format&fit=crop" alt="Kollektion 2">
+          <div class="card-body">
+            <h4>Urban Mix</h4>
+            <p class="muted">Street-wear Einflüsse, lässig und robust.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1520975919086-1db6e7e6b7ff?w=1200&q=60&auto=format&fit=crop" alt="Kollektion 3">
+          <div class="card-body">
+            <h4>Limited Drops</h4>
+            <p class="muted">Kleinauflagen, besondere Materialien.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1551854838-3f5c685f9b48?w=1200&q=60&auto=format&fit=crop" alt="Kollektion 4">
+          <div class="card-body">
+            <h4>Neutral Basics</h4>
+            <p class="muted">Farben, die immer passen.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" style="margin-bottom:18px">
+      <h2>Über Resh</h2>
+      <div class="two">
+        <div>
+          <p class="muted">Resh verbindet Design und Alltagstauglichkeit. Unsere Stile holen Inspiration aus Altbewährtem und Neuem — deshalb ist es egal, ob ein Stück „alt“ oder „neu“ ist; wichtig ist, dass es getragen wird. Wir setzen auf Materialqualität, faire Produktion und zeitlose Formen.</p>
+          <p class="muted">Du willst eigene Fotos, Lookbooks oder ein Pop-Up? Kontaktiere uns.</p>
+        </div>
+
+        <aside id="kontakt" class="contact" aria-labelledby="kontakt-title">
+          <h3 id="kontakt-title" style="margin-top:0">Kontakt</h3>
+          <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <div style="margin-bottom:8px">
+              <label class="muted" for="name">Name</label>
+              <input id="name" name="name" placeholder="Dein Name" required>
+            </div>
+            <div style="margin-bottom:8px">
+              <label class="muted" for="email">E-Mail</label>
+              <input id="email" name="email" type="email" placeholder="mail@beispiel.de" required>
+            </div>
+            <div style="margin-bottom:8px">
+              <label class="muted" for="message">Nachricht</label>
+              <textarea id="message" name="message" placeholder="Frage oder Nachricht..." required></textarea>
+            </div>
+            <div style="display:flex;gap:8px;justify-content:flex-end">
+              <button class="btn" type="submit">Senden</button>
+            </div>
+            <p id="feed" style="margin-top:8px;color:var(--muted);font-size:0.9rem"></p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Resh — Alle Rechte vorbehalten · <span class="muted">Design: Vorlage</span>
+    </footer>
+  </div>
+
+  <script>
+    // Jahr setzen
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Einfaches Formularverhalten (nur Demo - ersetzt durch echten Endpoint)
+    function handleSubmit(e){
+      e.preventDefault();
+      const n = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const feed = document.getElementById('feed');
+      // Hier würdest du fetch() zu deinem Backend machen. Wir simulieren eine erfolgreiche Sendung.
+      feed.textContent = "Danke, " + (n || "dein") + " Nachricht wurde (simuliert) gesendet.";
+      e.target.reset();
+      return false;
+    }
+
+    // Optional: Schnell-Taste zum Scrollen
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (ev)=>{
+        ev.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
